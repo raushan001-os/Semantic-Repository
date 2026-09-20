@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible enterprise dashboard built with semantic HTML5.">
+  <title>Atlas Dashboard | Overview</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" aria-label="Atlas Dashboard home">Atlas<span>+</span></a>
+    </div>
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Dashboard</a></li>
+        <li><a href="pages/users.html">Users</a></li>
+        <li><a href="pages/reports.html">Reports</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="icon-button" aria-label="Open notifications">🔔</button>
+      <button type="button" class="profile-button" aria-label="Open profile menu">RT</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Dashboard sidebar">
+      <nav aria-label="Dashboard sections">
+        <h2>Workspace</h2>
+        <ul>
+          <li><a href="index.html" aria-current="page">Overview</a></li>
+          <li><a href="pages/users.html">User management</a></li>
+          <li><a href="pages/reports.html">Reports</a></li>
+          <li><a href="#settings">Settings</a></li>
+        </ul>
+      </nav>
+      <section class="help-card" aria-labelledby="help-title">
+        <h2 id="help-title">Need help?</h2>
+        <p>Visit the support center for dashboard guidance.</p>
+        <a href="#support">Support center</a>
+      </section>
+    </aside>
+
+    <main id="main-content" class="content">
+      <header class="page-heading">
+        <div>
+          <p class="eyebrow">Workspace overview</p>
+          <h1>Dashboard</h1>
+          <p>Monitor your organization's activity and key metrics.</p>
+        </div>
+        <button type="button" class="primary-button" data-modal-open="report-modal">Create report</button>
+      </header>
+
+      <section aria-labelledby="metrics-title">
+        <div class="section-heading">
+          <h2 id="metrics-title">Key metrics</h2>
+          <p>Current reporting period</p>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <h3>Active users</h3><p class="metric-value">12,480</p><p class="positive">+8.2% from last month</p>
+          </article>
+          <article class="metric-card">
+            <h3>Projects</h3><p class="metric-value">248</p><p class="positive">+12 this month</p>
+          </article>
+          <article class="metric-card">
+            <h3>Completion rate</h3><p class="metric-value">87%</p><p class="positive">+3.4% from last month</p>
+          </article>
+          <article class="metric-card">
+            <h3>Open tasks</h3><p class="metric-value">36</p><p class="neutral">4 due today</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="activity-title" class="panel">
+        <div class="section-heading">
+          <div><h2 id="activity-title">Recent activity</h2><p>Latest updates from your workspace</p></div>
+          <a href="pages/reports.html">View all activity</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Recent workspace activity</caption>
+            <thead><tr><th scope="col">User</th><th scope="col">Action</th><th scope="col">Date</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Aisha Khan</th><td>Created a project</td><td>20 Sep 2026</td><td><span class="status success">Completed</span></td></tr>
+              <tr><th scope="row">Rohan Das</th><td>Updated a report</td><td>19 Sep 2026</td><td><span class="status success">Completed</span></td></tr>
+              <tr><th scope="row">Maya Singh</th><td>Requested access</td><td>19 Sep 2026</td><td><span class="status warning">Pending</span></td></tr>
+              <tr><th scope="row">Arjun Mehta</th><td>Closed a task</td><td>18 Sep 2026</td><td><span class="status success">Completed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="preferences-title" class="panel">
+        <div class="section-heading"><h2 id="preferences-title">Workspace preferences</h2></div>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Contact preferences</legend>
+            <div class="form-grid">
+              <div>
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="full-name" type="text" autocomplete="name" required aria-describedby="name-help">
+                <p id="name-help" class="field-help">Use the name shown on your organization profile.</p>
+              </div>
+              <div>
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help">
+                <p id="email-help" class="field-help">We'll use this address for account notifications.</p>
+              </div>
+              <div>
+                <label for="frequency">Report frequency</label>
+                <select id="frequency" name="frequency">
+                  <option value="weekly">Weekly</option><option value="monthly">Monthly</option><option value="quarterly">Quarterly</option>
+                </select>
+              </div>
+              <div>
+                <span class="form-label">Notification channels</span>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="channels" value="email"> Email</label>
+                  <label><input type="checkbox" name="channels" value="app"> In-app</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="primary-button" type="submit">Save preferences</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Atlas Dashboard</p>
+    <nav aria-label="Footer navigation"><a href="#privacy">Privacy</a><a href="#accessibility">Accessibility</a><a href="#support">Support</a></nav>
+  </footer>
+
+  <dialog id="report-modal" aria-labelledby="report-title">
+    <form method="dialog" class="modal-card">
+      <button class="modal-close" value="cancel" aria-label="Close create report dialog">×</button>
+      <h2 id="report-title">Create report</h2>
+      <p>Select the reporting period and create a new dashboard report.</p>
+      <fieldset>
+        <legend>Report details</legend>
+        <label for="report-name">Report name</label>
+        <input id="report-name" name="report-name" type="text" required minlength="3">
+        <label for="report-period">Period</label>
+        <select id="report-period" name="report-period"><option>Current month</option><option>Previous month</option><option>Current quarter</option></select>
+      </fieldset>
+      <div class="modal-actions"><button type="submit" value="cancel" class="secondary-button">Cancel</button><button type="submit" value="default" class="primary-button">Create report</button></div>
+    </form>
+  </dialog>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
